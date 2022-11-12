@@ -1,0 +1,17 @@
+# libraries
+lib
+
+# packages
+pkg
+
+# object files
+*.o
+
+# static library
+*.a
+
+# test files
+test.out*
+
+# editor config
+.vscode
