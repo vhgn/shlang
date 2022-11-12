@@ -73,3 +73,14 @@ int shlang_trans(shlang_queue_t *queue, void *data) {
 
 	return queue->min && queue->min->ptr != queue->ptr;
 }
+
+void shlang_free(shlang_queue_t *queue) {
+	while (queue->min) {
+		shlang_recv_t *temp = queue->min;
+		queue->min = temp->next;
+
+		free(temp);
+	}
+
+	free(queue);
+}

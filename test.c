@@ -5,9 +5,15 @@
 #define QUEUE_SIZE 10
 
 int main() {
+
+
+
+
+
 	int x;
 	shlang_queue_t *q;
 	shlang_recv_t *r;
+	m = 5;
 
 	q = shlang_init(QUEUE_SIZE, sizeof(int));
 	r = shlang_follow(q);
@@ -29,6 +35,8 @@ int main() {
 		/*int data = *(int*) */shlang_get(r);
 		/*printf("ptr: %zu data: %d\n", r->ptr, data);*/
 	}
+
+	shlang_free(q);
 
 	return 0;
 }

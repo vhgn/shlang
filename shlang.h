@@ -70,4 +70,9 @@ void *shlang_get(shlang_recv_t *recv);
  */
 int shlang_trans(shlang_queue_t *q, void *data);
 
+/**
+ * Free all memory (queue and receivers)
+ */
+ void shlang_free(shlang_queue_t* queue);
+
 #endif /* SHLANG_HEADER */
