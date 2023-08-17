@@ -57,3 +57,12 @@ When you request a new receiver:
 
 Reading data just increments the receiver pointer and rearranges listeners
 Transmitting data increments the transmitter pointer
+
+# Coming
+
+- Concurrency guards
+
+# Bugs
+
+- Receiver should rearrange itself in a loop
+Use sentinel in queue and use double linked list for receivers
